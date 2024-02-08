@@ -10,6 +10,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Planetas } from "./views/planetas";
 import { Vehicles } from "./views/vehicles";
+import { Login } from "./views/login";
 // import { useParams } from "react-router-dom";
 //create your first component
 const Layout = () => {
@@ -27,6 +28,7 @@ const Layout = () => {
                         <Route path="/planetas/:id" element={<Planetas/>} />
                         <Route path="/vehicles/:id" element={<Vehicles/>} />
                         <Route path="/single/:theid" element={<Single />} />
+                        <Route path="/signin" element={<Login />} />
                         <Route path="*" element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />
