@@ -12,7 +12,7 @@ export function Planetas() {
     console.log(store.planeta);
     return (
         <div className="bg dark">
-            <div className="card mb-3 mx-auto" style={{ maxWidth: "90%" }}>
+            <div className="card mt-3 mx-auto" style={{ maxWidth: "72%" }}>
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={store.planeta.uid == 1 ?

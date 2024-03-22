@@ -12,7 +12,7 @@ export function Vehicles() {
     console.log(store.vehicle);
     return (
         <div className="bg dark">
-            <div className="card mb-3 mx-auto" style={{ maxWidth: "90%" }}>
+            <div className="card mt-3 mx-auto" style={{ maxWidth: "90%" }}>
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={`https://starwars-visualguide.com/assets/img/vehicles/${store.vehicle.uid}.jpg`} className="img-fluid rounded-start" alt="..." />

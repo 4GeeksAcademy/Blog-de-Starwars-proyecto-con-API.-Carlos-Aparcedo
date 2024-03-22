@@ -1,9 +1,9 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Login } from "../views/login";
 export const Navbar = () => {
-    const{store,actions} = useContext (Context)
+    const { store, actions } = useContext(Context)
     return (
         <nav className="navbar bg-black">
             <div className="container-fluid">
@@ -11,19 +11,20 @@ export const Navbar = () => {
                     <a className="navbar-brand"></a>
                     <img className="width-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png"></img>
                 </Link>
-                <Link className="btn btn-success" to="/signin">
+                <Link className="btn btn-outline-success rounded-pill px-4" to="/signin">
                     Login
                 </Link>
                 <div className="ml-auto">
                     <div className="dropdown">
-                        <button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            favoritos {store.favoritos.length}
+                        <button className="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Favoritos {store.favoritos.length}
                         </button>
-                        <ul className="dropdown-menu">
-                            {store.favoritos.map((element)=>{
-                                return(
-                                    <li><a className="dropdown-item" href="#">{element}</a>
-                                    <button className="btn btn-danger" onClick={()=> actions.removeFavorites(element)}>x</button>
+                        <ul className="dropdown-menu dropdown-menu-end ">
+                            {store.favoritos.map((element) => {
+                                return (
+                                    <li className="d-flex p-1">
+                                        <a className="dropdown-item" href="#">{element}</a>
+                                        <button className="btn btn-danger" onClick={() => actions.removeFavorites(element)}>x</button>
                                     </li>
                                 )
                             })}
